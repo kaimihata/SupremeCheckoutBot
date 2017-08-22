@@ -1,0 +1,46 @@
+{
+  "manifest_version": 2,
+  "name": "ResellClub",
+  "version": "0.2",
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "options_page": "options/options.html",
+  "content_scripts": [
+    {
+      "matches": ["*://www.supremenewyork.com/shop"],
+      "js": ["jquery/jquery-3.2.1.min.js","content/emailPage.js"],
+      "run_at": "document_end"
+    }, {
+      "matches": ["*://www.supremenewyork.com/previews/fallwinter2017/all"],
+      "js": ["jquery/jquery-3.2.1.min.js","content/findItem.js"],
+      "run_at": "document_end"
+    }, {
+      "matches": [ "*://www.supremenewyork.com/shop/*" ],
+      "js": [ "jquery/jquery-3.2.1.min.js", "content/sizeAndColor.js"],
+      "run_at": "document_end"
+    }, {
+      "matches": [ "*://www.supremenewyork.com/checkout" ],
+      "js": [ "jquery/jquery-3.2.1.min.js", "content/checkout.js"],
+      "run_at": "document_end"
+    }, {
+      "matches": ["*://www.supremenewyork.com/"],
+      "js": ["jquery/jquery-3.2.1.min.js","content/refresh.js"],
+      "run_at": "document_end"
+    }
+  ],
+
+  "browser_action": {
+    "default_icon": "online-shop.png",
+    "default_popup": "popup/popup.html"
+  },
+
+  "background": {
+    "scripts": ["jquery/jquery-3.2.1.min.js","background.js"],
+    "persistent": true
+  }
+}

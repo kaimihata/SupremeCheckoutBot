@@ -1,0 +1,35 @@
+.outer-container {
+  text-align: center;
+}
+
+@font-face {
+  font-family: "heading-font";
+  src: url('TrickTag.svg');
+}
+
+.form-container {
+  background-color: red;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  overflow: auto;
+  float: left;
+  font-family: "Arial";
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form-inputs {
+  text-align: right;
+  border-top: 1px;
+}
+
+.header {
+  text-align: center;
+  font-size: 24pt;
+  padding: 20px;
+}
+
+body {
+  background-color: black;
+}
