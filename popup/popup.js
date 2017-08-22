@@ -1,3 +1,5 @@
+//when the page loads it sends a message to bring up the "view all" page of the
+//shop, which will call refresh.js if the shop hasn't launched yet
 $(function() {
 
   $("#view_all").click(function(){

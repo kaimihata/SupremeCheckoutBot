@@ -1,3 +1,5 @@
+
+//this doesn't do anything idk why its here
 function buttonTest() {
   var userInfo = {
     name: document.getElementById("name").value,

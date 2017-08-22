@@ -1,3 +1,7 @@
+//gets all checkout info from local storage
+//adds it to the checkout fields on the supreme website
+//does NOT hit the checkout button for you
+
 chrome.storage.local.get({
   name: "lul",
   email: "",
@@ -24,10 +28,10 @@ chrome.storage.local.get({
     $('#order_billing_state').val(res.state);
     $('#order_billing_country').val(res.country);
     $('#credit_card_type').val(res.type);
-    $('#cnb').val(res.card_num);
+    $('#nnaerb').val(res.card_num);
     $('#credit_card_month').val(res.exp_mon);
     $('#credit_card_year').val(res.exp_year);
-    $('#vval').val(res.cvv);
+    $('#orcer').val(res.ccv);
     //checks agree or whatever
     $('.iCheck-helper')[1].click();
 });
