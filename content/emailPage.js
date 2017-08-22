@@ -1,3 +1,6 @@
+//enters your email into the the current page on the supreme shop
+//this doesn't really do anything tho ill prolly delete it
+
 $(function(){
 
   console.log("emailPage.js");

@@ -1,3 +1,7 @@
+//gets all checkout info from local storage
+//adds it to the checkout fields on the supreme website
+//does NOT hit the checkout button for you
+
 chrome.storage.local.get({
   name: "lul",
   email: "",

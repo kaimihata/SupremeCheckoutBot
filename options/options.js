@@ -1,6 +1,7 @@
 //stores the users info in the chrome local storage
 
 function storeUserInfo() {
+  //gets all the info from the fields on the options page
   console.log("STORING INFO");
   var name = $("#name").val();
   var email = $("#email").val();
@@ -21,6 +22,8 @@ function storeUserInfo() {
   var size = $("#size").val();
   var color = $("#color").val();
 
+  //these don't really do anything, i don't think i implemented this in the
+  //checkout page
   if (t_and_c === "on") {
     t_and_c = true;
   }
@@ -29,6 +32,8 @@ function storeUserInfo() {
       save_address = true;
   }
 
+  //stores all of the user info locally
+  //safe from external threats, but anyone can locally access this information
   chrome.storage.local.set({
     name: name,
     email: email,
@@ -53,6 +58,7 @@ function storeUserInfo() {
   });
 }
 
+//fills all the fields with the stored information
 function init() {
   chrome.storage.local.get({
     name: "lul",
@@ -74,6 +80,7 @@ function init() {
     color: ""
 
   }, function(items) {
+    //lol idk why i didn't use jquery here but im too lazy to change it
       document.getElementById("name").value = items.name;
       document.getElementById("email").value = items.email;
       document.getElementById("telephone").value = items.telephone;
@@ -94,6 +101,7 @@ function init() {
       document.getElementById("color").value = items.color;
   });
 }
-
+//once the page is loaded it runs init
 document.addEventListener('DOMContentLoaded', init);
+//click listener for the submit button
 document.getElementById('submit').addEventListener('click', storeUserInfo);
