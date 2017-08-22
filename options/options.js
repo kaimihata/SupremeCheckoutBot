@@ -1,3 +1,5 @@
+//stores the users info in the chrome local storage
+
 function storeUserInfo() {
   console.log("STORING INFO");
   var name = $("#name").val();
