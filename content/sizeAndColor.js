@@ -17,5 +17,10 @@ $(function() {
 
       $(".button").click();
 
+    chrome.runtime.sendMessage({
+      type: "checkout"
+    });
+
+
 });
 });
