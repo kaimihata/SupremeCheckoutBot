@@ -19,7 +19,8 @@ function storeUserInfo() {
   var exp_year = $("#exp_year").val();
   var ccv = $("#ccv").val();
   var t_and_c = $("#t_and_c").val();
-  var size = $("#size").val();
+  var size1 = $("#size1").val();
+  var size2 = $("#size2").val();
   var color = $("#color").val();
 
   //these don't really do anything, i don't think i implemented this in the
@@ -50,7 +51,8 @@ function storeUserInfo() {
     exp_year: exp_year,
     ccv: ccv,
     t_and_c: t_and_c,
-    size: size,
+    size1: size1,
+    size2: size2,
     color: color
 
   }, function() {
@@ -76,7 +78,8 @@ function init() {
     exp_year: "",
     ccv: "",
     t_and_c: true,
-    size: "",
+    size1: "",
+    size2: "",
     color: ""
 
   }, function(items) {
@@ -97,7 +100,8 @@ function init() {
       document.getElementById("exp_year").value = items.exp_year;
       document.getElementById("ccv").value = items.ccv;
       document.getElementById("t_and_c").value = items.t_and_c;
-      document.getElementById("size").value = items.size;
+      document.getElementById("size1").value = items.size1;
+      document.getElementById("size2").value = items.size2;
       document.getElementById("color").value = items.color;
   });
 }

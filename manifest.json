@@ -16,7 +16,7 @@
       "js": ["jquery/jquery-3.2.1.min.js","content/emailPage.js"],
       "run_at": "document_end"
     }, {
-      "matches": ["*://www.supremenewyork.com/previews/fallwinter2017/all"],
+      "matches": ["*://www.supremenewyork.com/shop/all"],
       "js": ["jquery/jquery-3.2.1.min.js","content/findItem.js"],
       "run_at": "document_end"
     }, {
@@ -26,6 +26,10 @@
     }, {
       "matches": [ "*://www.supremenewyork.com/checkout" ],
       "js": [ "jquery/jquery-3.2.1.min.js", "content/checkout.js"],
+      "run_at": "document_end"
+    }, {
+      "matches": ["*://www.supremenewyork.com/shop/t-shirts/*"],
+      "js": ["jquery/jquery-3.2.1.min.js","content/sizeAndColor.js"],
       "run_at": "document_end"
     }, {
       "matches": ["*://www.supremenewyork.com/"],
