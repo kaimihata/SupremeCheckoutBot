@@ -16,6 +16,7 @@ $(function() {
 			}, 100);
 
       $(".button").click();
-
+       what
+       
 });
 });
