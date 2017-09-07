@@ -16,7 +16,16 @@ $(function() {
 			}, 100);
 
       $(".button").click();
+<<<<<<< HEAD
        what
        
+=======
+
+    chrome.runtime.sendMessage({
+      type: "checkout"
+    });
+
+
+>>>>>>> 40e62ef49a86d26b456c2470585b9456c4bd1e04
 });
 });
