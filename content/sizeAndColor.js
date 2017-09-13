@@ -4,28 +4,26 @@ $(function() {
   size1: "Large",
   size2: "Medium"
   }, function(items) {
-    console.log(items);
 			setInterval(function(){
 				if(!$('.in-cart').is(":visible")) {
-					$("#size option").each(function(i) {
+					$("#s option").each(function(i) {
 						if($(this).text() == "Large") {
-							$('#size').prop('selectedIndex', i);
+							$('#s').prop('selectedIndex', i);
 						}
 					});
 				}
 			}, 100);
 
-      $(".button").click();
-<<<<<<< HEAD
-       what
-       
-=======
+    //add to cart
+    setTimeout(
+      function() {
+        $(".button").click();
+      }, 100);
 
-    chrome.runtime.sendMessage({
-      type: "checkout"
-    });
+    setTimeout(
+      function() {
+        $(".button.checkout").click();
+      }, 200);
 
-
->>>>>>> 40e62ef49a86d26b456c2470585b9456c4bd1e04
 });
 });
