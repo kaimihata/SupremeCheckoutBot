@@ -6,7 +6,11 @@ $(function() {
     chrome.storage.local.set({
       keyword: $("#keyword").val()
     });
-    chrome.runtime.sendMessage({ type: "goToShop"});
+    key_url = key_url = "http://www.supremenewyork.com/shop/" + "accessories" + "/" + $("#keyword").val();
+    chrome.runtime.sendMessage({
+       type: "refresh",
+       url: key_url
+     });
   })
 
 });
