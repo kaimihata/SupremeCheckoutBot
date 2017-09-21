@@ -5,27 +5,19 @@ $(function() {
   size2: "Medium"
   }, function(items) {
     console.log(items);
-			setInterval(function(){
-				if(!$('.in-cart').is(":visible")) {
-					$("#size option").each(function(i) {
-						if($(this).text() == "Large") {
-							$('#size').prop('selectedIndex', i);
-						}
-					});
-				}
-			}, 100);
+          $("#s > option").each(function() {
+              if ($(this).text() == items.size1) {
+                $('#s option[value='$(this).val()']').attr("selected", "selected");
+              }
+              console.log($(this).text());
+          });
 
-      $(".button").click();
-<<<<<<< HEAD
-       what
-       
-=======
+      //$(".button").click();
 
     chrome.runtime.sendMessage({
       type: "checkout"
     });
 
 
->>>>>>> 40e62ef49a86d26b456c2470585b9456c4bd1e04
-});
+  });
 });
