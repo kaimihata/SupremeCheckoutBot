@@ -25,5 +25,9 @@ chrome.storage.local.get({
       }
     }
   }
+
+  setTimeout(function() {
+    console.log("timeout");
+  }, 5000);
 });
 });
