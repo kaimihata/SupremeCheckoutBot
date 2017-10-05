@@ -1,7 +1,11 @@
 //gets all checkout info from local storage
 //adds it to the checkout fields on the supreme website
 //does NOT hit the checkout button for you
+<<<<<<< HEAD
 
+=======
+$(function() {
+>>>>>>> 9093263be5addd626bd9e3387f611b237b815e57
 chrome.storage.local.get({
   name: "lul",
   email: "",
@@ -27,11 +31,20 @@ chrome.storage.local.get({
     $('#order_billing_city').val(res.city);
     $('#order_billing_state').val(res.state);
     $('#order_billing_country').val(res.country);
+<<<<<<< HEAD
     $('#credit_card_type').val(res.type);
     $('#nnaerb').val(res.card_num);
     $('#credit_card_month').val(res.exp_mon);
     $('#credit_card_year').val(res.exp_year);
     $('#orcer').val(res.ccv);
+=======
+    $('#nnaerb').val(res.card_num);
+    $('#credit_card_month').val(res.exp_mon);
+    $('#credit_card_year').val(res.exp_year);
+    $('#orcer').val(res.cvv);
+>>>>>>> 9093263be5addd626bd9e3387f611b237b815e57
     //checks agree or whatever
-    $('.iCheck-helper')[1].click();
+    $('.icheckbox_minimal')[0].click();
+    $('.icheckbox_minimal')[1].click();
+});
 });

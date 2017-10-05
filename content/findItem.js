@@ -25,5 +25,12 @@ chrome.storage.local.get({
       }
     }
   }
+<<<<<<< HEAD
+=======
+
+  setTimeout(function() {
+    console.log("timeout");
+  }, 5000);
+>>>>>>> 9093263be5addd626bd9e3387f611b237b815e57
 });
 });
