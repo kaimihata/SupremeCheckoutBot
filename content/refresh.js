@@ -5,18 +5,20 @@ function refresh(time) {
   setTimeout(function() {
     chrome.storage.local.get({
       keyword: "",
-      type: "accessories"
+      type: ""
     }, function(items) {
-      key_url = "http://www.supremenewyork.com/shop/" + type + "/" + keyword;
+      var key_url = "http://www.supremenewyork.com/shop/" + items.type + "/" + items.keyword;
+      console.log(key_url);
       chrome.runtime.sendMessage({
           type: "refresh",
           url: key_url
         });
-      }, time)
-    })
+      });
+    }, time);
 
-}
+};
 
 $(function() {
   refresh(5000);
+  console.log("xd");
 });

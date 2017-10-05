@@ -7,7 +7,7 @@ $(function() {
 			setInterval(function(){
 				if(!$('.in-cart').is(":visible")) {
 					$("#s option").each(function(i) {
-						if($(this).text() == "Large") {
+						if($(this).text() == items.size1) {
 							$('#s').prop('selectedIndex', i);
 						}
 					});

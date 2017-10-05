@@ -27,7 +27,9 @@ chrome.storage.local.get({
   }
 
   setTimeout(function() {
-    console.log("timeout");
+    chrome.runtime.sendMessage({
+      type: "goToShop"
+    });
   }, 5000);
 });
 });

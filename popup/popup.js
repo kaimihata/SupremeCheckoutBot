@@ -4,13 +4,16 @@ $(function() {
 
   $("#view_all").click(function(){
     chrome.storage.local.set({
-      keyword: $("#keyword").val()
+      keyword: $("#keyword").val(),
+      type: $("#type").val()
     });
-    key_url = key_url = "http://www.supremenewyork.com/shop/" + "accessories" + "/" + $("#keyword").val();
+    var key_url;
+    key_url = "http://www.supremenewyork.com/shop/" + $("#type").val() + "/" + $("#keyword").val();
     chrome.runtime.sendMessage({
-       type: "refresh",
-       url: key_url
-     });
+      type: "refresh",
+      url: key_url
+    });
+
   })
 
 });
