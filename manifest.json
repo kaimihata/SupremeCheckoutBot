@@ -12,12 +12,28 @@
   "options_page": "options/options.html",
   "content_scripts": [
     {
+      "matches": ["*://www.supremenewyork.com/shop"],
+      "js": ["jquery/jquery-3.2.1.min.js","content/emailPage.js"],
+      "run_at": "document_end"
+    }, {
+      "matches": ["*://www.supremenewyork.com/shop/all"],
+      "js": ["jquery/jquery-3.2.1.min.js","content/findItem.js"],
+      "run_at": "document_end"
+    }, {
       "matches": [ "*://www.supremenewyork.com/shop/*" ],
       "js": [ "jquery/jquery-3.2.1.min.js", "content/sizeAndColor.js"],
       "run_at": "document_end"
     }, {
       "matches": [ "*://www.supremenewyork.com/checkout" ],
       "js": [ "jquery/jquery-3.2.1.min.js", "content/checkout.js"],
+      "run_at": "document_end"
+    }, {
+      "matches": ["*://www.supremenewyork.com/shop/t-shirts/*"],
+      "js": ["jquery/jquery-3.2.1.min.js","content/sizeAndColor.js"],
+      "run_at": "document_end"
+    }, {
+      "matches": ["*://www.supremenewyork.com/"],
+      "js": ["jquery/jquery-3.2.1.min.js","content/refresh.js"],
       "run_at": "document_end"
     }
   ],

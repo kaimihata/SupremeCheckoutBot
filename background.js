@@ -5,7 +5,9 @@ chrome.runtime.onMessage.addListener(function(request, sender) {
     //updates the tab to the item url
     chrome.tabs.update(null, { url: request.url});
   } else if (request.type == "goToShop") {
-    chrome.tabs.update(null, { url: "http://www.supremenewyork.com/shop/all"});
+    //SET TO THE PREVIEW NOW, NEEDS TO BE CHANGED TO THE ACTUAL SHOP LINK
+    //OTHERWISE THIS WILL NOT WORK
+    chrome.tabs.create({ url: "http://www.supremenewyork.com/shop/all"});
   } else if (request.type == "refresh") {
     //tries to go to the "view all" page of the shop
     chrome.tabs.update(null, { url: request.url});

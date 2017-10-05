@@ -25,11 +25,14 @@ chrome.storage.local.get({
       }
     }
   }
+<<<<<<< HEAD
+=======
 
   setTimeout(function() {
     chrome.runtime.sendMessage({
       type: "goToShop"
     });
   }, 5000);
+>>>>>>> 9093263be5addd626bd9e3387f611b237b815e57
 });
 });
