@@ -19,9 +19,7 @@ function storeUserInfo() {
   var exp_year = $("#exp_year").val();
   var ccv = $("#ccv").val();
   var t_and_c = $("#t_and_c").val();
-  var size1 = $("#size1").val();
-  var size2 = $("#size2").val();
-  var color = $("#color").val();
+  var size = $("#size").val();
 
   //these don't really do anything, i don't think i implemented this in the
   //checkout page
@@ -51,9 +49,7 @@ function storeUserInfo() {
     exp_year: exp_year,
     ccv: ccv,
     t_and_c: t_and_c,
-    size1: size1,
-    size2: size2,
-    color: color
+    size: size,
 
   }, function() {
     alert("Checkout Info Saved");
@@ -78,9 +74,7 @@ function init() {
     exp_year: "",
     ccv: "",
     t_and_c: true,
-    size1: "",
-    size2: "",
-    color: ""
+    size: ""
 
   }, function(items) {
     //lol idk why i didn't use jquery here but im too lazy to change it
@@ -100,9 +94,7 @@ function init() {
       document.getElementById("exp_year").value = items.exp_year;
       document.getElementById("ccv").value = items.ccv;
       document.getElementById("t_and_c").value = items.t_and_c;
-      document.getElementById("size1").value = items.size1;
-      document.getElementById("size2").value = items.size2;
-      document.getElementById("color").value = items.color;
+      document.getElementById("size").value = items.size;
   });
 }
 //once the page is loaded it runs init
