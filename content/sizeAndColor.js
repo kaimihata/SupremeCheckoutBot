@@ -23,13 +23,15 @@ $(function() {
 				});
 			}
 
-			}, 100);
-      $(".button").click();
-    });
+		}, 100);
+    $(".button").click();
+  });
+    console.log($(".button"));
+    $(".button").click();
 
     setTimeout(
       function() {
-        $(".button.checkout").click();
+        $(".button checkout").click();
     },200);
 
 });

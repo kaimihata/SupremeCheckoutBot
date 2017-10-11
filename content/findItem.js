@@ -3,6 +3,7 @@
 $(function() {
   chrome.storage.local.get({
     keyword: "",
+    type: "",
     color: ""
   }, function(items) {
     if (items.keyword == "") {
@@ -21,7 +22,13 @@ $(function() {
             });
           }
         }
-
+        var ref_url = "http://www.supremenewyork.com/shop/all/" + items.type;
+        setTimeout( function() {
+          chrome.runtime.sendMessage({
+            type: "refresh",
+            url: ref_url
+          })
+        }, 4000)
       })
     }
 
