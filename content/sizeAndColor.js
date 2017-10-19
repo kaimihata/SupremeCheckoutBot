@@ -33,5 +33,9 @@ $(function() {
       function() {
         $(".button checkout").click();
     },200);
-
+    var key_url = "https://www.supremenewyork.com/checkout";
+    chrome.runtime.sendMessage({
+      type: "goToUrlSameTab",
+      url: key_url
+    });
 });

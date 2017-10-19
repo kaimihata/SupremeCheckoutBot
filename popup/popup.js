@@ -8,7 +8,7 @@ $(function() {
     color: ""
   }, function(items) {
     if (items.keyword != "") {
-      //$("#keyword").val(items.keyword);
+      $("#keyword").val(items.keyword);
     }
     $("#type").val(items.type);
     $("#color").val(items.color);

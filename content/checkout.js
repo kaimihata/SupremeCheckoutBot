@@ -29,10 +29,10 @@ $(function() {
       $('#order_billing_state').val(res.state);
       $('#order_billing_country').val(res.country);
       $('#credit_card_type').val(res.type);
-      $('#nnaerb').val(res.card_num);
+      $('#cnb').val(res.card_num);
       $('#credit_card_month').val(res.exp_mon);
       $('#credit_card_year').val(res.exp_year);
-      $('#orcer').val(res.ccv);
+      $('#vval').val(res.ccv);
       $('#nnaerb').val(res.card_num);
       $('#credit_card_month').val(res.exp_mon);
       $('#credit_card_year').val(res.exp_year);
