@@ -1,24 +1,29 @@
 //when the page loads it sends a message to bring up the "view all" page of the
 //shop, which will call refresh.js if the shop hasn't launched yet
 $(function() {
-
+  console.log($("#enable").is(":checked"));
   chrome.storage.local.get({
     keyword: "",
     type: "",
-    color: ""
+    color: "",
+    enable: ""
   }, function(items) {
     if (items.keyword != "") {
       $("#keyword").val(items.keyword);
     }
     $("#type").val(items.type);
     $("#color").val(items.color);
+    if (items.enable) {
+      $("#enable").click();
+    }
   })
 
   $("#view_all").click(function(){
     chrome.storage.local.set({
       keyword: $("#keyword").val(),
       type: $("#type").val(),
-      color: $("#color").val()
+      color: $("#color").val(),
+      enable: $("#enable").is(":checked")
     });
     var key_url;
     key_url = "http://www.supremenewyork.com/shop/all/" + $("#type").val();
