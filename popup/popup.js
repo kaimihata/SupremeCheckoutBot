@@ -5,25 +5,21 @@ $(function() {
   chrome.storage.local.get({
     keyword: "",
     type: "",
-    color: "",
-    enable: ""
+    color: ""
   }, function(items) {
     if (items.keyword != "") {
       $("#keyword").val(items.keyword);
     }
     $("#type").val(items.type);
     $("#color").val(items.color);
-    if (items.enable) {
-      $("#enable").click();
-    }
+
   })
 
   $("#view_all").click(function(){
     chrome.storage.local.set({
       keyword: $("#keyword").val(),
       type: $("#type").val(),
-      color: $("#color").val(),
-      enable: $("#enable").is(":checked")
+      color: $("#color").val()
     });
     var key_url;
     key_url = "http://www.supremenewyork.com/shop/all/" + $("#type").val();

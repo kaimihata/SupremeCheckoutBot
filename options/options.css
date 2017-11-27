@@ -13,7 +13,10 @@ input[type=button]:hover {
 }
 
 .outer-container {
-  text-align: center;
+  width: 200px ;
+  height: 50px;
+  margin-left: auto ;
+  margin-right: auto ;
 }
 
 .form-container {

@@ -1,7 +1,7 @@
 //chose size and color for item and go to checkout
 $(function() {
   chrome.storage.local.get({
-    size: "Large",
+    size: "Medium",
 
   }, function(items) {
     console.log(items);
@@ -31,7 +31,11 @@ $(function() {
 
     setTimeout(
       function() {
-        $(".button checkout").click();
+        var ref = $(".button.checkout").attr('href');
+        chrome.runtime.sendMessage({
+          type: "goToUrlSameTab",
+          url: ref
+        });
     },200);
     /**
     var key_url = "https://www.supremenewyork.com/checkout";
