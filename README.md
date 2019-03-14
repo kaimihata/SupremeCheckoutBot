@@ -1,6 +1,4 @@
-# SupremeCheckoutBot
-
-## THIS IS NOW OUTDATE AND NOT MAY NOT WORK AS OF SPRING 2019
+# SupremeCheckoutBot (NOTE: Currently outdated and may not work as of Spring/Summer 2019)
 This is a Chrome Extension to expedite the checkout process at Supremenewyork.com
 Before the drop, enter the item code, color and your payment information, then start the bot. 
 The bot will refresh the page until the new items are released. 
